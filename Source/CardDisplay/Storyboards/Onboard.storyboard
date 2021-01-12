@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="q9g-KS-G3d">
+            <objects>
+                <navigationController storyboardIdentifier="OnboardNavigationController" id="EpL-aB-Mp8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZOB-xp-BE7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CeX-ty-SST" kind="relationship" relationship="rootViewController" id="JLd-Md-MJk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aX1-z1-KIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="127"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="3s4-2v-9Jo">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="CeX-ty-SST" customClass="OnboardingViewController" customModule="CardDisplay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uVh-Sm-myK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nd9-0N-RbJ">
+                                <rect key="frame" x="147" y="762" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4uf-6V-YIq"/>
+                                    <constraint firstAttribute="width" constant="120" id="GrZ-eb-ZdO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onClickContinue:" destination="CeX-ty-SST" eventType="touchUpInside" id="qMy-R9-QEh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1In-cI-T6s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1In-cI-T6s" firstAttribute="bottom" secondItem="nd9-0N-RbJ" secondAttribute="bottom" constant="60" id="dj6-UN-pZn"/>
+                            <constraint firstItem="nd9-0N-RbJ" firstAttribute="centerX" secondItem="1In-cI-T6s" secondAttribute="centerX" id="iWt-RB-3sn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YVB-n0-e66"/>
+                    <connections>
+                        <outlet property="continueBtn" destination="nd9-0N-RbJ" id="tiH-bC-WKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkD-an-Omo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="307" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
